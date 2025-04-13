@@ -1,0 +1,65 @@
+multi_tenant_saas/
+├── manage.py
+├── config/                   # Project configuration
+│   ├── __init__.py
+│   ├── settings/
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── development.py
+│   │   └── production.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+├── apps/                     # All application modules
+│   ├── core/                 # Shared functionality
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── services.py       # Business logic
+│   │   └── utils.py
+│   ├── tenants/              # Multi-tenant functionality
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── serializers.py
+│   │   ├── services.py       # Tenant-specific business logic
+│   │   └── middleware.py     # Tenant identification middleware
+│   ├── blog/                 # AI-powered blog service
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── serializers.py
+│   │   ├── services.py       # Blog-specific business logic
+│   │   └── ai_services.py    # AI integration services
+│   └── messaging/            # Video/messaging service
+│       ├── __init__.py
+│       ├── models.py
+│       ├── views.py
+│       ├── urls.py
+│       ├── serializers.py
+│       ├── services.py       # Messaging-specific business logic
+│       ├── consumers.py      # WebSocket consumers
+│       └── tasks.py          # Background tasks
+├── api/                      # API versioning and routing
+│   ├── __init__.py
+│   ├── v1/
+│   │   ├── __init__.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   └── v2/                   # Future API versions
+├── services/                 # Shared business logic
+│   ├── __init__.py
+│   ├── permissions.py
+│   ├── authentication.py
+│   └── pagination.py
+├── utils/                    # Utility functions
+│   ├── __init__.py
+│   └── helpers.py
+├── templates/                # HTML templates
+├── static/                   # Static files
+├── media/                    # User-uploaded content
+├── docs/                     # API documentation
+└── docker/                   # Docker configuration
+    ├── Dockerfile
+    └── docker-compose.yml
