@@ -24,6 +24,7 @@ multi_tenant_saas/
 │   │   ├── serializers.py
 │   │   ├── services.py       # Tenant-specific business logic
 │   │   └── middleware.py     # Tenant identification middleware
+|   |   |__ router
 │   ├── blog/                 # AI-powered blog service
 │   │   ├── __init__.py
 │   │   ├── models.py
